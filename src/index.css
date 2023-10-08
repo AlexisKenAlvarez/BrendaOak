@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .my-container {
+    @apply max-w-[1500px] w-full mx-auto h-auto relative z-10
+  }
+
+  html, body {
+    scroll-behavior: smooth;
+  }
+
+  /* Hide the default scrollbar */
+  ::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.5rem;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #121212;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 1rem;
+    transition: background-color 0.2s;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #999;
+  }
+
+  .tracingPath {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: tracePath 5s linear forwards;
+  }
+
+  @keyframes tracePath {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+}
